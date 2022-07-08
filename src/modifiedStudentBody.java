@@ -7,22 +7,33 @@
 public class modifiedStudentBody
 {
     //-----------------------------------------------------------------
-    //  Creates some Address and Student objects and prints them.
+    //  DRIVER CLASS
+    //  Creates a course, adds several students, prints a roll, and prints
+    //  the overall course test average.
     //-----------------------------------------------------------------
     public static void main (String[] args)
     {
-        Course math = new Course();
-        Course physics = new Course();
-        Course geometry = new Course();
+        Course math = new Course("math");
+        Course geometry = new Course("geometry");
+        Course history = new Course("history");
 
         modifiedStudent john = new modifiedStudent("John", "Smith", 23, 32, 23); //First New student Object Created
         modifiedStudent marsha = new modifiedStudent("Marsha", "Jones", 70, 68, 74); //Second New student Object Created
         modifiedStudent mert = new modifiedStudent("Mert", "Saner",  100, 100, 96); //Third New student Object Created
 
-        System.out.println(john);
+        math.addStudent(mert);
+        math.addStudent(john);
+
+        geometry.addStudent(mert);
+        geometry.addStudent(marsha);
+
+        history.addStudent(john);
+        history.addStudent(marsha);
+
+        System.out.println(math.roll());
         System.out.println();
-        System.out.println(marsha);
+        System.out.println(history.roll());
         System.out.println();
-        System.out.println(mert);
+        System.out.println(geometry.roll());
     }
 }

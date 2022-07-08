@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  *  Represents a course taken at a school
  *
@@ -6,14 +8,17 @@
 
 public class Course {
 
+    private String courseName;
+    ArrayList<modifiedStudent> studentsParticipate = new ArrayList<modifiedStudent>();
 
+    //studentsParticipate.add(mert);
     /**
      *  Constructor of the Course class which only accept the name of the course
-     * @param courseName
-     * @return nothing
+     *  @return nothing
      */
-    public Course(String courseName){
 
+    public Course(String courseName){
+        this.courseName = courseName;
     }
 
     /**
@@ -22,7 +27,7 @@ public class Course {
      * @return void
      */
     public void addStudent(modifiedStudent student){
-
+        studentsParticipate.add(student);
     }
 
     /**
@@ -31,7 +36,6 @@ public class Course {
      * @return void
      */
     public double average(modifiedStudent student){
-
         double allAverage = student.testScoreAverage();  //finds testScore Average per student
         return allAverage;
     }
@@ -39,11 +43,17 @@ public class Course {
 
     /**
      * Prints all students in the course
-     * @param student
-     * @return void
+     * @param
+     * @return result
      */
-    public void roll(modifiedStudent student) {
+    public String roll() {
+        // String participants = studentsParticipate
 
-
+        for (int i = 0; i < studentsParticipate.size(); i++) {
+            studentsParticipate = studentsParticipate.get(i);
+            String result = "Course Name: " + courseName + ", Participants: " + studentsParticipate; // + studentsParticipate
+            return result;
+        }
+        return "";
     }
 }

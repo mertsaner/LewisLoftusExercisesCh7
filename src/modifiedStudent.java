@@ -1,10 +1,13 @@
+import java.util.ArrayList;
+import java.util.function.IntFunction;
+
 /**
  * Exercise 7_2
  *  Uses an Arraylist in the Course to store students taking that course
  * @author Mert Saner
  */
 
-class modifiedStudent {
+class modifiedStudent extends ArrayList<modifiedStudent> {
     private String firstName, lastName;
     private double testScore1, testScore2, testScore3, testScoreAverage;
 
@@ -76,7 +79,6 @@ class modifiedStudent {
     //------------------------------------------------------------------
     public String toString() {
         String result;
-
         result = firstName + " " + lastName + "\n";
         result = result + "TestScore1: " + testScore1 + ", TestScore2: " + testScore2 + ", TestScore3: " + testScore3 + "\n";
         result = result + "Average of all exams: " + testScoreAverage();

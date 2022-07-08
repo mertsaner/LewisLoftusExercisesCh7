@@ -9,7 +9,6 @@ public class Course {
 
     /**
      *  Constructor of the Course class which only accept the name of the course
-     *
      * @param courseName
      * @return nothing
      */
@@ -22,19 +21,18 @@ public class Course {
      * @param student
      * @return void
      */
-    public void addStudent(Student student){
+    public void addStudent(modifiedStudent student){
 
     }
-
 
     /**
      * Compute and returns the average of all student's test score averages
      * @param student
      * @return void
      */
+    public void average(modifiedStudent student){
 
-    public void average(Student student){
-
+        student.testScoreAverage();  //finds testScore Average per student
        // return average;
     }
 }

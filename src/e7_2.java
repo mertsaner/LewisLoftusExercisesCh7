@@ -10,7 +10,6 @@ class Student
     private Address homeAddress, schoolAddress;
     private double testScore1, testScore2, testScore3, testScoreAverage;
 
-
     //-------------------------------------------------------------
     // Constructor: Sets up this student with the specified values.
     //-------------------------------------------------------------

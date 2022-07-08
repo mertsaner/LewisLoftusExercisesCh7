@@ -1,20 +1,19 @@
 /**
  * Exercise 7_2
- *
+ *  Uses an Arraylist in the Course to store students taking that course
  * @author Mert Saner
  */
 
-class Student
+class newStudentClass
 {
     private String firstName, lastName;
     private Address homeAddress, schoolAddress;
-    private double testScore1, testScore2, testScore3, testScoreAverage;
-
+    private double testScore1, testScore2, testScore3;
 
     //-------------------------------------------------------------
     // Constructor: Sets up this student with the specified values.
     //-------------------------------------------------------------
-    public Student(String first, String last, Address home, Address school, double testScore1, double testScore2, double testScore3) {
+    public newStudentClass(String first, String last, Address home, Address school, double testScore1, double testScore2, double testScore3) {
 
         firstName = first;
         lastName = last;
@@ -23,10 +22,9 @@ class Student
         this.testScore1 = testScore1;
         this.testScore2 = testScore2;
         this.testScore3 = testScore3;
-        this.testScoreAverage = testScoreAverage;
     }
 
-    public Student(String first, String last, Address home, Address school) {
+    public newStudentClass(String first, String last, Address home, Address school) {
 
         firstName = first;
         lastName = last;
@@ -70,18 +68,20 @@ class Student
         if (testNumber == 3){
             return testScore3;
         }
-       return 0;
+        return 0;
     }
 
     /**
      * Compute average test score
+     * @param testScore1 testScore2 testScore3
      * @return average test score of the student
      */
 
-    public double average () {
-        double average = (this.testScore1 + this.testScore2 + this.testScore3)/3;
-        return average;
-    }
+//    public double testAverage (double testScore1, double testScore2, double testScore3) {
+//        double average = (testScore1 + testScore2 + testScore3)/3;
+//        return average;
+//    }
+
 
     //------------------------------------------------------------------
     // Returns a string representation of this Student object.
@@ -94,8 +94,7 @@ class Student
         result = firstName + " " + lastName + "\n";
         result = result + "Home Address:\n" + homeAddress + "\n";
         result = result + "School Address:\n" + schoolAddress + "\n";
-        result = result + "TestScore1: " + testScore1 + ", TestScore2: " + testScore2 + ", TestScore3: " + testScore3 + "\n";
-        result = result + "Average of all exams: " + average();
+        result = result + "TestScore1: " + testScore1 + ", TestScore2: " + testScore2 + ", TestScore3: " + testScore3;
         return result;
     }
 }

@@ -30,9 +30,20 @@ public class Course {
      * @param student
      * @return void
      */
-    public void average(modifiedStudent student){
+    public double average(modifiedStudent student){
 
-        student.testScoreAverage();  //finds testScore Average per student
-       // return average;
+        double allAverage = student.testScoreAverage();  //finds testScore Average per student
+        return allAverage;
+    }
+
+
+    /**
+     * Prints all students in the course
+     * @param student
+     * @return void
+     */
+    public void roll(modifiedStudent student) {
+
+
     }
 }

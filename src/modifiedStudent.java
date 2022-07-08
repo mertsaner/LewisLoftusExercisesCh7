@@ -6,29 +6,24 @@
 
 class modifiedStudent {
     private String firstName, lastName;
-    private Address homeAddress, schoolAddress;
     private double testScore1, testScore2, testScore3, testScoreAverage;
 
     //-------------------------------------------------------------
     // Constructor: Sets up this student with the specified values.
     //-------------------------------------------------------------
-    public modifiedStudent(String first, String last, Address home, Address school, double testScore1, double testScore2, double testScore3) {
+    public modifiedStudent(String first, String last, double testScore1, double testScore2, double testScore3) {
 
         firstName = first;
         lastName = last;
-        homeAddress = home;
-        schoolAddress = school;
         this.testScore1 = testScore1;
         this.testScore2 = testScore2;
         this.testScore3 = testScore3;
     }
 
-    public modifiedStudent(String first, String last, Address home, Address school) {
+    public modifiedStudent(String first, String last) {
 
         firstName = first;
         lastName = last;
-        homeAddress = home;
-        schoolAddress = school;
     }
 
 
@@ -83,8 +78,6 @@ class modifiedStudent {
         String result;
 
         result = firstName + " " + lastName + "\n";
-        result = result + "Home Address:\n" + homeAddress + "\n";
-        result = result + "School Address:\n" + schoolAddress + "\n";
         result = result + "TestScore1: " + testScore1 + ", TestScore2: " + testScore2 + ", TestScore3: " + testScore3 + "\n";
         result = result + "Average of all exams: " + testScoreAverage();
         return result;

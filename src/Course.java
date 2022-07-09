@@ -32,11 +32,20 @@ public class Course {
 
     /**
      * Compute and returns the average of all student's test score averages
-     * @param student
+     * @param
      * @return void
      */
-    public double average(modifiedStudent student){
-        double allAverage = student.testScoreAverage();  //finds testScore Average per student
+    public double average(){
+
+       // for (int i = 0; i < studentsParticipate.size(); i++){
+            //studentsParticipate.get(i);
+
+          //  modifiedStudent.testScoreAverage();
+     //   }
+
+       //  = modifiedStudent.testScoreAverage();
+        modifiedStudent mert = new modifiedStudent("Mert", "Saner",  100, 100, 96); //Third New student Object Created
+        double allAverage = mert.testScoreAverage();
         return allAverage;
     }
 

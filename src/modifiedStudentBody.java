@@ -21,19 +21,22 @@ public class modifiedStudentBody
         modifiedStudent marsha = new modifiedStudent("Marsha", "Jones", 70, 68, 74); //Second New student Object Created
         modifiedStudent mert = new modifiedStudent("Mert", "Saner",  100, 100, 96); //Third New student Object Created
 
-        math.addStudent(mert);
         math.addStudent(john);
-
-        geometry.addStudent(mert);
-        geometry.addStudent(marsha);
+        math.addStudent(mert);
+        math.addStudent(marsha);
 
         history.addStudent(john);
         history.addStudent(marsha);
+        geometry.addStudent(marsha);
+        geometry.addStudent(mert);
 
-        System.out.println(math.roll());
-        System.out.println();
-        System.out.println(history.roll());
-        System.out.println();
-        System.out.println(geometry.roll());
+            math.average();
+            history.average();
+            geometry.average();
+            System.out.println(math.roll());
+            System.out.println();
+            System.out.println(history.roll());
+            System.out.println();
+            System.out.println(geometry.roll());
     }
 }

@@ -15,7 +15,6 @@ class modifiedStudent extends ArrayList<modifiedStudent> {
     // Constructor: Sets up this student with the specified values.
     //-------------------------------------------------------------
     public modifiedStudent(String first, String last, double testScore1, double testScore2, double testScore3) {
-
         firstName = first;
         lastName = last;
         this.testScore1 = testScore1;
@@ -23,20 +22,12 @@ class modifiedStudent extends ArrayList<modifiedStudent> {
         this.testScore3 = testScore3;
     }
 
-    public modifiedStudent(String first, String last) {
-
-        firstName = first;
-        lastName = last;
-    }
-
-
-    /**
+  /**
      * Accept two parameters: the test number (1 through 3) and the score.
      *
      * @param testScore testNumber
      * @return setMethod(mutator) returns void
      */
-
     public void setTestScore(double testScore, int testNumber) {
         if (testNumber == 1) {
             testScore1 = testScore;
@@ -67,7 +58,6 @@ class modifiedStudent extends ArrayList<modifiedStudent> {
      *
      * @return average test score of the student
      */
-
     public double testScoreAverage() {
         double average = (this.testScore1 + this.testScore2 + this.testScore3) / 3;
         return average;

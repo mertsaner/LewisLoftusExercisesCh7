@@ -4,7 +4,7 @@
 //  Demonstrates the use of an aggregate class.
 //*********************************************************************
 
-public class modifiedStudentBody
+public class modifiedStudentBody    //DRIVER CLASS which consists of main method
 {
     //-----------------------------------------------------------------
     //  DRIVER CLASS
@@ -30,13 +30,13 @@ public class modifiedStudentBody
         geometry.addStudent(marsha);
         geometry.addStudent(mert);
 
-            math.average();
-            history.average();
-            geometry.average();
-            System.out.println(math.roll());
-            System.out.println();
-            System.out.println(history.roll());
-            System.out.println();
-            System.out.println(geometry.roll());
+       // math.average();
+       // history.average();
+       // geometry.average();
+        System.out.println(math.roll());
+        System.out.println();
+        System.out.println(history.roll());
+        System.out.println();
+        System.out.println(geometry.roll());
     }
 }

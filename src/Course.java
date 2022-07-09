@@ -36,19 +36,18 @@ public class Course {
      * @return void
      */
     public double average(){
-
-       // for (int i = 0; i < studentsParticipate.size(); i++){
-            //studentsParticipate.get(i);
-
-          //  modifiedStudent.testScoreAverage();
-     //   }
-
-       //  = modifiedStudent.testScoreAverage();
+        modifiedStudent john = new modifiedStudent("John", "Smith", 23, 32, 23); //First New student Object Created
+        modifiedStudent marsha = new modifiedStudent("Marsha", "Jones", 70, 68, 74); //Second New student Object Created
         modifiedStudent mert = new modifiedStudent("Mert", "Saner",  100, 100, 96); //Third New student Object Created
-        double allAverage = mert.testScoreAverage();
+
+
+        double johnAverage = john.testScoreAverage();
+        double marshaAverage = marsha.testScoreAverage();
+        double mertAverage = mert.testScoreAverage();
+
+        double allAverage = (johnAverage + marshaAverage + mertAverage) / 3;
         return allAverage;
     }
-
 
     /**
      * Prints all students in the course
@@ -56,7 +55,9 @@ public class Course {
      * @return result
      */
     public String roll() {
-        String result = "Course Name: " + courseName + ", Participants: " + studentsParticipate; // + studentsParticipate
+        String result = "Course Name: " + courseName + ", Participants: " + studentsParticipate;
+        result = result + ", AllAverage: " + average();
+
         return result;
     }
 }

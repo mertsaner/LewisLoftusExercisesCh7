@@ -56,13 +56,7 @@ public class Course {
      * @return result
      */
     public String roll() {
-        // String participants = studentsParticipate
-
-        for (int i = 0; i < studentsParticipate.size(); i++) {
-            studentsParticipate = studentsParticipate.get(i);
-            String result = "Course Name: " + courseName + ", Participants: " + studentsParticipate; // + studentsParticipate
-            return result;
-        }
-        return "";
+        String result = "Course Name: " + courseName + ", Participants: " + studentsParticipate; // + studentsParticipate
+        return result;
     }
 }

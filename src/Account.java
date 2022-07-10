@@ -16,6 +16,19 @@ public class Account {
         balance = initialBalance;
     }
 
+    /**
+     *
+     * We will overload the constructor so that it will provide to open account with
+     * just a name and account number with asscuming initial balance is zero
+     * @Author Mert Saner
+     *
+    */
+    public Account (String name, int AccountNumber){ //Modified  Constructor
+        AccountName = name;
+        this.AccountNumber = AccountNumber;  //this. almost always in left hand side
+        balance = 0;
+    }
+
     public double deposit (double deposit){
         balance = balance + deposit;
         //New Value of deposit equals this deposit(deposit amount entered) + earlier deposit

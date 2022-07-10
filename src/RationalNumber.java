@@ -74,9 +74,17 @@ public class RationalNumber implements Comparable {
     //--------------------------------------------------------------------
     //  Return the denominator of this rational number.
     //--------------------------------------------------------------------
-    public float getDenomitor(){
+    public float getDenominator(){
         return denominator;
     }
+
+    public void setNumerator(float numerator){
+        this.numerator = numerator;
+    }
+    public void setDenominator(float denominator){
+        this.denominator = denominator;
+    }
+
 
     //--------------------------------------------------------------------
     //  Returns the reciprocal of this rational number
@@ -91,8 +99,8 @@ public class RationalNumber implements Comparable {
     //--------------------------------------------------------------------
     public RationalNumber add(RationalNumber op2) //add function take op2 object as a input value
     {
-        float commonDenominator = denominator * op2. getDenomitor();
-        float numerator1 = numerator * op2.getDenomitor();
+        float commonDenominator = denominator * op2. getDenominator();
+        float numerator1 = numerator * op2.getDenominator();
         float numerator2 = op2.getNumarator() * denominator;
         float sum = numerator1 + numerator2;
 
@@ -104,8 +112,8 @@ public class RationalNumber implements Comparable {
     // Rational number.
     //----------------------------------------------------------------------
     public RationalNumber subtract(RationalNumber op2){
-        float commonDenominator = denominator * op2.getDenomitor();
-        float numerator1 = numerator * op2. getDenomitor();
+        float commonDenominator = denominator * op2.getDenominator();
+        float numerator1 = numerator * op2. getDenominator();
         float numerator2 = op2.getNumarator() * denominator;
         float difference = numerator1 - numerator2;
 
@@ -118,7 +126,7 @@ public class RationalNumber implements Comparable {
     //----------------------------------------------------------------------
     public RationalNumber multiply(RationalNumber op2){
         float numer = numerator * op2.getNumarator();
-        float denom = denominator * op2.getDenomitor();
+        float denom = denominator * op2.getDenominator();
 
         return new RationalNumber(numer, denom);
     }
@@ -136,7 +144,7 @@ public class RationalNumber implements Comparable {
     // Assume they are both reduced.
     //------------------------------------------------------------------------
     public boolean isLike(RationalNumber op2){
-        return (numerator == op2.getNumarator() && denominator == op2.getDenomitor());
+        return (numerator == op2.getNumarator() && denominator == op2.getDenominator());
     }
 
     //----------------------------------------------------------------------------
@@ -181,13 +189,13 @@ public class RationalNumber implements Comparable {
         return num1;
     }
 
-    @Override
-    public void setComparable(int comparable) {
-
-    }
-
-    @Override
-    public int getComparable() {
-        return 0;
-    }
+//    @Override
+//    public void setComparable(int comparable) {
+//
+//    }
+//
+//    @Override
+//    public int getComparable() {
+//        return 0;
+//    }
 }

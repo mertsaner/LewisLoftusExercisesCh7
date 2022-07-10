@@ -10,8 +10,8 @@ public class RationalTester {   //Driver class
 
 
 
-        //r1.setComparable(4);
-        //r2.setComparable(4);
+        r1.setNumerator(123); //Interface Works!✅
+        r2.setNumerator(456); //Interface Works!✅
 
         RationalNumber.comparable(r1, r2);
 

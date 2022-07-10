@@ -9,13 +9,13 @@
 
 public class RationalNumber implements Comparable {
 
-    private int numerator, denominator;
+    private float numerator, denominator;       //Types is changed to show decimal values
 
     //-----------------------------------------------------------------
     //  Constructor: Sets up the rational number by ensuring a nonzero
     //  denominator and making only the numerator signed.
     //-----------------------------------------------------------------
-    public RationalNumber(int numer, int denom){
+    public RationalNumber(float numer, float denom) {
         if( denom == 0)
             denom = 1;
 
@@ -24,10 +24,8 @@ public class RationalNumber implements Comparable {
             numer = numer * -1;
             denom = denom * -1;
         }
-
         numerator = numer;
         denominator = denom;
-
         reduce ();
     }
 
@@ -39,40 +37,44 @@ public class RationalNumber implements Comparable {
      *  * value of 0.0001.
      * @return
      */
-    public void comparable (RationalNumber number, RationalNumber number2)
+    public static void comparable(RationalNumber number, RationalNumber number2)
     {
        if((number.numerator/number.denominator) > (number2.numerator/number2.denominator))
        {
-          System.out.println(number + " is bigger than " + number2 );
+           System.out.println(number + " is bigger than " + number2 );
        }
-       else if ((number.numerator/number.denominator) == (number2.numerator/number2.denominator)) {
+       else if ((number.numerator/number.denominator) == (number2.numerator/number2.denominator))
+       {
+
+           //System.out.println(number.numerator);
+           //System.out.println(number.denominator);
+     //      number.numerator = (float) number.numerator;
+     //      number2.numerator = (float) number2.numerator;
+
+           double result = (float) (number.numerator/number.denominator);
+           System.out.println("Division result is: " + result);
+
+           System.out.println((number.numerator/number.denominator));
+           System.out.println(number2.numerator/number2.denominator);
+
            System.out.println(number + " is equal to " + number2);
        }
-       else
-           System.out.println(number2 + " is bigger than " + number );
-    }
-
-    @Override
-    public void setComparable(int comparable) {
-
-    }
-
-    @Override
-    public int getComparable() {
-        return 0;
+       else {
+           System.out.println(number2 + " is bigger than " + number);
+       }
     }
 
     //--------------------------------------------------------------------
     //  Returns the numerator of this rational number
     //--------------------------------------------------------------------
-    public int getNumarator(){
+    public float getNumarator(){
         return numerator;
     }
 
     //--------------------------------------------------------------------
     //  Return the denominator of this rational number.
     //--------------------------------------------------------------------
-    public int getDenomitor(){
+    public float getDenomitor(){
         return denominator;
     }
 
@@ -89,10 +91,10 @@ public class RationalNumber implements Comparable {
     //--------------------------------------------------------------------
     public RationalNumber add(RationalNumber op2) //add function take op2 object as a input value
     {
-        int commonDenominator = denominator * op2. getDenomitor();
-        int numerator1 = numerator * op2.getDenomitor();
-        int numerator2 = op2.getNumarator() * denominator;
-        int sum = numerator1 + numerator2;
+        float commonDenominator = denominator * op2. getDenomitor();
+        float numerator1 = numerator * op2.getDenomitor();
+        float numerator2 = op2.getNumarator() * denominator;
+        float sum = numerator1 + numerator2;
 
         return new RationalNumber(sum, commonDenominator); //returns newly created instance of the class RationalNumber
     }
@@ -102,10 +104,10 @@ public class RationalNumber implements Comparable {
     // Rational number.
     //----------------------------------------------------------------------
     public RationalNumber subtract(RationalNumber op2){
-        int commonDenominator = denominator * op2.getDenomitor();
-        int numerator1 = numerator * op2. getDenomitor();
-        int numerator2 = op2.getNumarator() * denominator;
-        int difference = numerator1 - numerator2;
+        float commonDenominator = denominator * op2.getDenomitor();
+        float numerator1 = numerator * op2. getDenomitor();
+        float numerator2 = op2.getNumarator() * denominator;
+        float difference = numerator1 - numerator2;
 
         return new RationalNumber(difference, commonDenominator);
 
@@ -115,8 +117,8 @@ public class RationalNumber implements Comparable {
     //  Multiplies this rational number by the one passed as a parameter.
     //----------------------------------------------------------------------
     public RationalNumber multiply(RationalNumber op2){
-        int numer = numerator * op2.getNumarator();
-        int denom = denominator * op2.getDenomitor();
+        float numer = numerator * op2.getNumarator();
+        float denom = denominator * op2.getDenomitor();
 
         return new RationalNumber(numer, denom);
     }
@@ -159,7 +161,7 @@ public class RationalNumber implements Comparable {
     private void reduce ()
     {
         if (numerator != 0) {
-            int common = gcd(Math.abs(numerator), denominator);
+            float common = gcd(Math.abs(numerator), denominator);
 
             numerator = numerator / common;
             denominator = denominator / common;
@@ -170,12 +172,22 @@ public class RationalNumber implements Comparable {
     //   Computes and returns the greatest common divisor of the two positive parameters.
     //   positive parameter. Uses Euclid's algorithm.
     //----------------------------------------------------------------------------------
-    public int gcd(int num1, int num2){        //If is declared private then no other method can reach it from other classes
+    public float gcd(float num1, float num2){        //If is declared private then no other method can reach it from other classes
         while (num1 != num2)                   // Since it is non-static method we cannot make direct call like in the static methods
             if (num1 > num2)                    //We create instance of the class and then call it
                 num1 = num1 - num2;
             else
                 num2 = num2 - num1 ;
         return num1;
+    }
+
+    @Override
+    public void setComparable(int comparable) {
+
+    }
+
+    @Override
+    public int getComparable() {
+        return 0;
     }
 }

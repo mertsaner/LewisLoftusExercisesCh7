@@ -4,16 +4,17 @@
  * numerator and denominator for both RationalNumber objects, then compare them using tolerance
  * value of 0.0001.
  * Main modified according to changes
- * @Author
+ * @Authr
  */
 
 public class RationalNumber implements Comparable {
+
 
     private float numerator, denominator;       //Types is changed to show decimal values
 
     //-----------------------------------------------------------------
     //  Constructor: Sets up the rational number by ensuring a nonzero
-    //  denominator and making only the numerator signed.
+    //  denominator and making only the numerator carry sign of the value.
     //-----------------------------------------------------------------
     public RationalNumber(float numer, float denom) {
         if( denom == 0)

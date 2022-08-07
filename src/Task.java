@@ -1,15 +1,16 @@
 /** JAVA LEWIS & LOFTUS EX 7.5
 *  @author mertsaner
 * I will add many objects to this class, like I did on my to-do-list
-* For instance, shopping items, laundry, washing dishes, programming,
-* working for ZIB, writing report for SNET, cleaning the room, preparing the dinner
-* Going out, sunbathing, go to gym, go for a walk
-* The program will priorities this list according my needs and then print the final prioritized list
+
 * */
-public class Task implements Priority{  //Task class represents to-do-list
+public class Task implements Priority{
+   // public static int taskPriority;  //Task class represents to-do-list, not possible to use
+   // since it changes all instances of the class
 
     private String taskName;
-    private int taskPriority;
+    public int taskPriority;
+    // We commented this and defined taskPriority as Static to use it in static class(main), but it didn't worked out since;
+//Static variables are shared across instances of the class. When edited, they change for all instances
     private String description;
 
     //Constructor, that will initialize variables for Task class

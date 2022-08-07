@@ -35,7 +35,7 @@ import java.util.Date;
 
         switch (dayString) {        //Task.taskPriority
             case "Mon":
-                //Make it in a way that the item which has priotry 1 will be replaced to 2 second each prioty will be step below
+                //Make it in a way that the item which has priority 1 will be replaced to 2 second each priority will be step below
                 ZIB.setTaskPriority(1);
                 break;
             case "Tue":
@@ -50,6 +50,13 @@ import java.util.Date;
             case "Sat":
                 break;
             case "Sun":
+                System.out.println("Entered!");
+                for (int i = 1; i < 10 ; i++){
+                        if(Task.taskPriority == 1)
+                        {}
+                }
+                System.out.println(ZIB.taskPriority);
+
                 ZIB.setTaskPriority(1);
                 break;
             default:

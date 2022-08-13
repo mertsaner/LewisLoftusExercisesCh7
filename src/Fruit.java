@@ -23,10 +23,10 @@ public class Fruit implements Comparable <Fruit> {
         return fruitDesc;
     }
     public void setFruitDesc(String fruitDesc){this.fruitDesc = fruitDesc;}
-    public int getQuantity() {
+    public int getQuantity() { //Accessor
         return quantity;
     }
-    public void setQuantity(int quantity){
+    public void setQuantity(int quantity){ //Mutator
         this.quantity = quantity;
     }
 

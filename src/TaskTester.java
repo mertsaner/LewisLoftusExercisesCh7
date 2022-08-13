@@ -25,7 +25,7 @@ import java.util.Arrays;
         todolist[4] = Java;
         todolist[5] = Sunbathing;
 
-        Arrays.sort(todolist);
+        //  Arrays.sort(todolist);
 //        int j = 0;
 //        for(Task temp: todolist) {
 //            System.out.println("Tasks " + ++j + " : " + temp.getTaskName()+ ", Priorty : " + temp.getTaskPriority ());

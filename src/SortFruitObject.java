@@ -16,7 +16,7 @@ public class SortFruitObject {
         fruits[2] = orange;
         fruits[3] = banana;
 
-        Arrays.sort(fruits);
+       // Arrays.sort(fruits);
 
         int i=0;
         for(Fruit temp: fruits){

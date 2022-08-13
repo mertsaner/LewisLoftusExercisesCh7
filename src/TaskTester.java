@@ -7,6 +7,7 @@ import java.util.Arrays;
  public class TaskTester {
     public static void main (String[] args ){       //DRIVER CLASS OF TASK CLASS
 
+        Task[] todolist = new Task[6];
 
 
         Task Edeka = new Task("Shopping in Edeka", 3, 0);
@@ -15,6 +16,22 @@ import java.util.Arrays;
         Task Gym = new Task("Going to Gym", 4, 1);
         Task Java = new Task("Studying Java", 1, 8);
         Task Sunbathing = new Task("Sunbathing", 5, 0);
+
+
+        todolist[0] = Edeka;
+        todolist[1] = Laundry;
+        todolist[2] = ZIB;
+        todolist[3] = Gym;
+        todolist[4] = Java;
+        todolist[5] = Sunbathing;
+
+        Arrays.sort(todolist);
+//        int j = 0;
+//        for(Task temp: todolist) {
+//            System.out.println("Tasks " + ++j + " : " + temp.getTaskName()+ ", Priorty : " + temp.getTaskPriority ());
+//        }
+
+
 
         Date d = new Date();
         System.out.println(Edeka);

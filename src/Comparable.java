@@ -1,10 +1,12 @@
-public interface Comparable {       //Java Interface, works only with abstract methods and constants
+public interface Comparable<F> {       //Java Interface, works only with abstract methods and constants
 
+    //Comparable Default
 //    //public void setComparable (int numerator);
 //    public int getComparable ();
 
 
-    public void setNumerator(float numerator);
-    public float getNumarator();
+    //====Used with Along with RationalTester, RationalNumber
+    //  public void setNumerator(float numerator);
+    // public float getNumarator();
 
 }

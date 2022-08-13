@@ -7,7 +7,7 @@
  * @Authr
  */
 
-public class RationalNumber implements Comparable {
+public class RationalNumber {
 
 
     private float numerator, denominator;       //Types is changed to show decimal values
